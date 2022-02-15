@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module SuffixTree</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>SuffixTree</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/merybria/Scrivania/unisa%20magistrale/daa/midterm/codice/SuffixTree.py">/home/merybria/Scrivania/unisa magistrale/daa/midterm/codice/SuffixTree.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="struttureImpiegate.Tree.html#Tree">struttureImpiegate.Tree.Tree</a>(<a href="builtins.html#object">builtins.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="SuffixTree.html#SuffixTree">SuffixTree</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SuffixTree">class <strong>SuffixTree</strong></a>(<a href="struttureImpiegate.Tree.html#Tree">struttureImpiegate.Tree.Tree</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SuffixTree">SuffixTree</a>(stringSet)<br>
+&nbsp;<br>
+class&nbsp;representing&nbsp;the&nbsp;suffix&nbsp;tree<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="SuffixTree.html#SuffixTree">SuffixTree</a></dd>
+<dd><a href="struttureImpiegate.Tree.html#Tree">struttureImpiegate.Tree.Tree</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="SuffixTree-__init__"><strong>__init__</strong></a>(self, stringSet)</dt><dd><tt>constructor&nbsp;method&nbsp;for&nbsp;the&nbsp;suffix&nbsp;tree<br>
+:param&nbsp;stringSet:&nbsp;a&nbsp;set&nbsp;of&nbsp;strings&nbsp;from&nbsp;which&nbsp;the&nbsp;suffix&nbsp;tree&nbsp;should&nbsp;be&nbsp;built</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>Return&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;elements&nbsp;in&nbsp;the&nbsp;alberi.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-child"><strong>child</strong></a>(self, position, s)</dt><dd><tt>the&nbsp;function&nbsp;is&nbsp;used&nbsp;to&nbsp;access&nbsp;to&nbsp;the&nbsp;child&nbsp;position&nbsp;of&nbsp;the&nbsp;specified&nbsp;position&nbsp;whose&nbsp;substring<br>
+-starts&nbsp;with&nbsp;the&nbsp;string&nbsp;s<br>
+-is&nbsp;a&nbsp;prefix&nbsp;for&nbsp;the&nbsp;string&nbsp;s<br>
+:param&nbsp;position(<a href="#SuffixTree">SuffixTree</a>.Position):&nbsp;the&nbsp;position&nbsp;where&nbsp;the&nbsp;function&nbsp;is&nbsp;called<br>
+:param&nbsp;s(str):&nbsp;the&nbsp;string<br>
+:returns&nbsp;the&nbsp;child&nbsp;node&nbsp;if&nbsp;it&nbsp;exists&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;doesn't</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-getNodeDepth"><strong>getNodeDepth</strong></a>(self, position)</dt><dd><tt>function&nbsp;that&nbsp;calculates&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;string&nbsp;until&nbsp;that&nbsp;node<br>
+:param&nbsp;position:&nbsp;the&nbsp;position&nbsp;whose&nbsp;depth&nbsp;is&nbsp;desired<br>
+:return:&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;substring</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-getNodeLabel"><strong>getNodeLabel</strong></a>(self, position)</dt><dd><tt>function&nbsp;that&nbsp;gets&nbsp;the&nbsp;string&nbsp;corresponding&nbsp;to&nbsp;a&nbsp;certain&nbsp;position<br>
+:param&nbsp;position:&nbsp;position&nbsp;whose&nbsp;string&nbsp;is&nbsp;desired<br>
+:return:&nbsp;the&nbsp;corresponding&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-getNodeMark"><strong>getNodeMark</strong></a>(self, position)</dt><dd><tt>function&nbsp;that&nbsp;accesses&nbsp;to&nbsp;the&nbsp;mark&nbsp;of&nbsp;the&nbsp;node<br>
+:param&nbsp;position:&nbsp;position&nbsp;whose&nbsp;mark&nbsp;is&nbsp;desired<br>
+:return:&nbsp;the&nbsp;list&nbsp;of&nbsp;the&nbsp;strings&nbsp;tho&nbsp;which&nbsp;the&nbsp;substring&nbsp;stored&nbsp;in&nbsp;that&nbsp;node&nbsp;belongs&nbsp;to</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-parent"><strong>parent</strong></a>(self, p)</dt><dd><tt>:returns&nbsp;the&nbsp;parent&nbsp;position&nbsp;of&nbsp;a&nbsp;generic&nbsp;position&nbsp;p</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-pathString"><strong>pathString</strong></a>(self, p)</dt><dd><tt>function&nbsp;used&nbsp;to&nbsp;return&nbsp;the&nbsp;path&nbsp;string&nbsp;from&nbsp;the&nbsp;root&nbsp;to&nbsp;the&nbsp;specified&nbsp;position<br>
+:param&nbsp;p:&nbsp;position&nbsp;whose&nbsp;path&nbsp;string&nbsp;is&nbsp;being&nbsp;calculated<br>
+:return:&nbsp;the&nbsp;path&nbsp;string&nbsp;from&nbsp;the&nbsp;root&nbsp;to&nbsp;the&nbsp;position&nbsp;p</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-root"><strong>root</strong></a>(self)</dt><dd><tt>:returns&nbsp;the&nbsp;root&nbsp;position&nbsp;in&nbsp;the&nbsp;tree</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>Position</strong> = &lt;class 'SuffixTree.SuffixTree.Position'&gt;<dd><tt>abstraction&nbsp;used&nbsp;to&nbsp;contain&nbsp;the&nbsp;reference&nbsp;to&nbsp;the&nbsp;tree&nbsp;and&nbsp;the&nbsp;node,&nbsp;whic&nbsp;contains&nbsp;information&nbsp;about&nbsp;the&nbsp;substring&nbsp;stored</tt></dl>
+
+<hr>
+Methods inherited from <a href="struttureImpiegate.Tree.html#Tree">struttureImpiegate.Tree.Tree</a>:<br>
+<dl><dt><a name="SuffixTree-__iter__"><strong>__iter__</strong></a>(self)</dt><dd><tt>Generate&nbsp;an&nbsp;iteration&nbsp;of&nbsp;the&nbsp;alberi's&nbsp;elements.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-children"><strong>children</strong></a>(self, p)</dt><dd><tt>Generate&nbsp;an&nbsp;iteration&nbsp;of&nbsp;Positions&nbsp;representing&nbsp;p's&nbsp;children.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-depth"><strong>depth</strong></a>(self, p)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;levels&nbsp;separating&nbsp;Position&nbsp;p&nbsp;from&nbsp;the&nbsp;root.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-height"><strong>height</strong></a>(self, p=None)</dt><dd><tt>Return&nbsp;the&nbsp;height&nbsp;of&nbsp;the&nbsp;subtree&nbsp;rooted&nbsp;at&nbsp;Position&nbsp;p.<br>
+&nbsp;<br>
+If&nbsp;p&nbsp;is&nbsp;None,&nbsp;return&nbsp;the&nbsp;height&nbsp;of&nbsp;the&nbsp;entire&nbsp;alberi.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-is_empty"><strong>is_empty</strong></a>(self)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;the&nbsp;alberi&nbsp;is&nbsp;empty.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-is_leaf"><strong>is_leaf</strong></a>(self, p)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;Position&nbsp;p&nbsp;does&nbsp;not&nbsp;have&nbsp;any&nbsp;children.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-is_root"><strong>is_root</strong></a>(self, p)</dt><dd><tt>Return&nbsp;True&nbsp;if&nbsp;Position&nbsp;p&nbsp;represents&nbsp;the&nbsp;root&nbsp;of&nbsp;the&nbsp;alberi.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-num_children"><strong>num_children</strong></a>(self, p)</dt><dd><tt>Return&nbsp;the&nbsp;number&nbsp;of&nbsp;children&nbsp;that&nbsp;Position&nbsp;p&nbsp;has.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-positions"><strong>positions</strong></a>(self)</dt><dd><tt>Generate&nbsp;an&nbsp;iteration&nbsp;of&nbsp;the&nbsp;alberi's&nbsp;positions.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-postorder"><strong>postorder</strong></a>(self)</dt><dd><tt>Generate&nbsp;a&nbsp;postorder&nbsp;iteration&nbsp;of&nbsp;positions&nbsp;in&nbsp;the&nbsp;alberi.</tt></dd></dl>
+
+<dl><dt><a name="SuffixTree-preorder"><strong>preorder</strong></a>(self)</dt><dd><tt>Generate&nbsp;a&nbsp;preorder&nbsp;iteration&nbsp;of&nbsp;positions&nbsp;in&nbsp;the&nbsp;alberi.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="struttureImpiegate.Tree.html#Tree">struttureImpiegate.Tree.Tree</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
