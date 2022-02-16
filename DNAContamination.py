@@ -17,7 +17,7 @@ class DNAContamination:
         self._stringStree = SuffixTree([self._string])
         self._treshold = l
         self._contaminants = HeapPriorityQueue()
-
+#o(len(lunghezza stringa))elevato 2 +log(m)
     def addContaminant(self, c):
         """
         function that adds a contaminant c to the structure implemented to store the information
@@ -71,7 +71,7 @@ class DNAContamination:
                     return counterMatch
             childNode = tree.child(childNode, string[counterMatch])
         return counterMatch
-
+#o(k log(m))
     def getContaminants(self, k):
         """
         Function that returns the first k contaminants of the string s.
