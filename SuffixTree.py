@@ -99,7 +99,7 @@ class SuffixTree(Tree):
         node = self._validate(p)
         return self._make_position(node._parent)
 
-    # funzione di inserimento del nodo
+    # funzione di inserimento del nodo complexity: O(len(stringhe))el2
     def _getStringsAndSuffixes(self):
         """
         the function is called in the initialization and calls the function
@@ -118,7 +118,7 @@ class SuffixTree(Tree):
                 node._marker.add(count)
                 self._initializeSuffix(self._make_position(self._root), self._make_position(node))
 
-    
+    #complexity o(len(parola da inserire))
     def _initializeSuffix(self, rad, n):
         """
         function which stores a particular node in the suffix tree
@@ -236,7 +236,7 @@ class SuffixTree(Tree):
             # inserisco il nuovo nodo come figlio del nodo intermediate
             self._initializeSuffix(self._make_position(intermediateNode), self._make_position(newNode))
             return
-
+#complexity o(len(s))
     def pathString(self, p):
         """
         function used to return the path string from the root to the specified position
@@ -259,7 +259,7 @@ class SuffixTree(Tree):
         :return: the substring [list[1]:list[2]] of string stringSet[list[0]]
         """
         return self._stringSet[list[0] - 1][list[1]:list[2]]
-
+#complexity o(1)
     def getNodeLabel(self, position):
         """
         function that gets the string corresponding to a certain position
@@ -268,7 +268,7 @@ class SuffixTree(Tree):
         """
         node = self._validate(position)
         return self._getStringFromSet(node._element._substring)
-
+# complexity o(1) poiche salvato nel campo
     def getNodeDepth(self, position):
         """
         function that calculates the length of the string until that node
@@ -277,7 +277,7 @@ class SuffixTree(Tree):
         """
         node = self._validate(position)
         return node._element._lengthSubstring
-
+#o(1) poiche il set dei marker é all'interno dell'elemento
     def getNodeMark(self, position):
         """
         function that accesses to the mark of the node
@@ -286,7 +286,7 @@ class SuffixTree(Tree):
         """
         node = self._validate(position)
         return node._marker
-
+#o(len(s))    
     def child(self, position, s):
         """
         the function is used to access to the child position of the specified position whose substring
